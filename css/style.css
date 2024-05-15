@@ -34,6 +34,19 @@ a {
     margin: 0;
     font-size: 22px;
 }
+.footer-link, .information{
+    margin: 0;
+    font-size: 16px;
+}
+.section-filtre-titre{
+    margin: 0;
+    font-size: 18px;
+
+}
+.section-filtre{
+    margin: 0;
+    font-size: 17px;
+}
 
 .card {
     background-color: white;
@@ -57,6 +70,80 @@ a {
 .neutral-star {
     color: var(--main-bg-color)
 }
+
+/* *******************************************  */
+/* *************** header ********************* */
+/* *******************************************  */
+
+.flex-commun{
+    display: flex;
+    flex-wrap: wrap; /* retour a la ligne pour les petits écrans */
+}
+.entete{
+    /* gestion de l'espace entre image et navigation */
+    flex-direction: row; /*en ligne*/
+    justify-content: space-between;
+    flex : 1;
+    height: 79px;
+    width:100%;
+    box-sizing: border-box;  
+}
+
+.logo{
+    width: 161px;
+    height: 79px;
+    padding: 30px 50px 30px 50px;
+    /* gap : 10px; */
+
+}
+.logo img{
+    width: 61px;
+    height: 19px;
+}
+
+.nav-entete{
+    /* gestion de l'organisation spaciale des 2 boutons de navigation */
+    width: 344px;
+    height: 35px;
+    padding: 0px 50px 0px 50px;
+    gap : 68px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.entete a{
+    font-size: 16px;
+    position:relative;
+    bottom: 0px;
+}
+.page-hebergement{
+    color : var(--main-color);
+    
+    border-top-color : var(--main-color);
+    border-top-width: 2px;
+    border-top-style: solid;
+
+    border-bottom-color: var(--main-color);
+    border-bottom-width: 2px;
+    border-bottom-style: none;
+}
+.page-activite{
+    color: #000000;
+
+    border-top-color : var(--main-color);
+    border-top-width: 2px;
+    border-top-style: none;
+
+    border-bottom-color: var(--main-color);
+    border-bottom-width: 2px;
+    border-bottom-style: none;
+}
+
+/* ************************** */
+/* SECTION RECHERCHE ET FITRE */
+/* ************************** */
+
+
+
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
@@ -124,17 +211,21 @@ a {
 
 
 
+
+
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 767.98px) {
     .hebergements-and-populaires {
         flex-direction: column;
     }
 
     .hebergements {
         width: 100%;
+        /* flex-direction: column; */
     }
 
     .populaires {

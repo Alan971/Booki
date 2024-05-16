@@ -12,6 +12,9 @@
 .fa-solid {
     color: var(--main-color);
 }
+.fa-light{
+    color: var(--main-color);
+}
 
 body {
     display: flex;
@@ -37,11 +40,11 @@ a {
 .footer-link, .information{
     margin: 0;
     font-size: 16px;
+    font-weight: normal;
 }
 .section-filtre-titre{
     margin: 0;
     font-size: 18px;
-
 }
 .section-filtre{
     margin: 0;
@@ -141,8 +144,92 @@ a {
 /* ************************** */
 /* SECTION RECHERCHE ET FITRE */
 /* ************************** */
+.info-groupe{
+    height: 281px;
+    flex-direction: column;
+    gap : 35px;
+}
+.headline{
+    height: 53px;
+    gap: 8px;
+}
 
+.search-bar {
+    background-color: white;
+    height: 49px;
+    width: 377px;
+}
+.search-bar form{
+    /*nécessairement  non wrap*/
+    display: flex; 
+}
 
+.search-item {
+    /*nécessairement  non wrap*/
+    display: flex;
+    /* couleur de fond de l'icone 'vector' partiellement masqué par l'input */
+    background-color: var(--main-bg-color);
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.search-item i {
+    margin-right: 5px;
+    color : black;
+    width: 10%;
+    text-align: center;
+}
+
+.search-item input {
+    background-color: #fff;
+    border: none;
+    flex: 1;
+    /* padding: 5px; */
+    width: 50%;
+    /* Hauteur de l'input inférieur pour une raison de bordure je suppose */
+    height: 45px; 
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+.dedionbouton{
+    /* Div nécessaire pour ajuster en hauteur et indépendament la taille du bouton rechercher 
+    sans lui la taille de l'input varie proportionellement aux modifications apportées*/
+    height: 49px;
+}
+
+.search-button {
+    background-color: var(--main-color);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: none;
+    width: auto;
+    height: 100%;
+
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+
+    margin: 0px 0px;
+    padding: 0px 25px;
+}
+
+.filtre-bar{
+    height: 50px;
+    flex-direction: row;
+    gap : 15px;
+}
+.information-bar{
+    height: 24px;
+    gap: 10px;
+}
+.information-bar i{
+    display: inline-block;
+    border : 1px;
+    border-color: #000000;
+    border-radius: 50px;
+}
 
 
 /****** Hebergements And Populaires ***********/

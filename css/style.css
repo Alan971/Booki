@@ -24,6 +24,7 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
+    height: auto;
     padding: 0 50px;
     box-sizing: border-box;
 }
@@ -215,20 +216,62 @@ a {
     padding: 0px 25px;
 }
 
-.filtre-bar{
-    height: 50px;
-    flex-direction: row;
-    gap : 15px;
+/* *********************** */
+/* ****** FILTRES ******** */
+/* *********************** */
+.filtreBar{
+    height:50px;
+    width: 758px;
+    gap: 15px;
+    justify-content: space-between;
 }
-.information-bar{
+
+.titreFiltre{
+    vertical-align: center;
+}
+.titreFiltre h2{
+    font-size: 18px;
+    font-weight: 700;
+    /* line-height: 21.13px; */
+}
+
+.eco, .familial, .romantique, .pepites{
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    gap:10px;
+
+    height: Fixed (50px)px;
+    padding: 14px 19px 4px 19px;
+}
+.filtreBar span{
+    /* transformation du span en inlineblock pour mettre l'icone et le texte sur la même ligne */
+    display: inline-block;
+}
+.eco:hover, .familial:hover, .romantique:hover, .pepites:hover{
+    background-color: var(--main-color);
+}
+
+/* barre de commentaire */
+.informationBar{
     height: 24px;
+    width: 1340px;
     gap: 10px;
 }
-.information-bar i{
+.informationBar span{
     display: inline-block;
-    border : 1px;
-    border-color: #000000;
-    border-radius: 50px;
+}
+.informationBar h3{
+    font-size: 16px;
+    font-weight: 400;
+}
+.borderSpan{
+    /* rond autour du i */
+    border: 1px solid #D9D9D9;
+    border-radius: 50%;
+    width:24px;
+    height:24px;
+    /* déplacer i au milieu du rond */
+    text-align: center;
 }
 
 

@@ -50,18 +50,34 @@
                         </div>
                     </form>
                 </nav>
-                <nav class="filtre-bar flex-commun">
-                    <h2 class="section-filtre-titre">Filtre</h2>
-                    <a href="#"><h2 class="section-filtre">Economique</h2></a>
-                    <a href="#"><h2 class="section-filtre">Familial</h2></a>
-                    <a href="#"><h2 class="section-filtre">Romantique</h2></a>
-                    <a href="#"><h2 class="section-filtre">Nos pépites</h2></a>
+                <!-- Filtres -->
+                <nav class="filtreBar flex-commun">
+                    <div class="titreFiltre">
+                        <h2>Filtre</h2>
+                    </div>
+                    
+                    <a class="eco" href="#">
+                        <span><i class="fa-solid fa-money-bill-wave"></i></span>
+                        <span><h2 class="section-filtre">Economique</h2></span>
+                    </a>
+                    <a class="familial" href="#">
+                        <span><i class="fa-solid fa-person"></i></span>
+                        <span><h2 class="section-filtre">Familial</h2></span>
+                    </a>
+                    <a class="romantique" href="#">
+                        <span><i class="fa-solid fa-heart"></i></span>
+                        <span><h2 class="section-filtre">Romantique</h2></span>
+                    </a>
+                    <a class="pepites" href="#">
+                        <span><i class="fa-solid fa-fire"></i></span>
+                        <span><h2 class="section-filtre">Nos pépites</h2></span>
+                    </a>
                 </nav>
-                <div class="information-bar">
-                    <i class="fa-solid fa-info"></i>
+                <div class="informationBar">
+                    <span class="borderSpan"><i class="fa-solid fa-info"></i></span>
                     <!-- <i class="fa-light fa-circle-info"></i> -->
                     <!-- ne fonctionne pas -->
-                    <h3 class="information">Plus de 500 logements sont disponibles dans cette ville</h3>
+                    <span><h3 class="information">Plus de 500 logements sont disponibles dans cette ville</h3></span>
                 </div>
             </div>
             <!-- ********************* -->
@@ -188,15 +204,6 @@
                     </div>
                     <a href="#">Afficher plus</a>
                 </section>
-                <section class="activites">
-                    <h2>Activités à Marseille</h2>
-                    <div>
-                        <a href="#"><img src="images/activites/reno-laithienne.jpg" alt="">Vieux-Port</a>
-                        <a href="#"><img src="images/activites/paul-hermann.jpg" alt="">Fort de Pomègues</a>
-                        <a href="#"><img src="images/activites/kilyan-sockalingum.jpg" alt="">Parc national des Calanques</a>
-                        <a href="#"><img src="images/activites/florian-wehde.jpg" alt="">Notre-Dame-de-la-Garde</a>
-                    </div>
-                </section>
                 <!-- ************************** -->
                 <!-- SECTION POPULAIRE A DROITE -->
                 <!-- ************************** -->
@@ -263,6 +270,20 @@
                                 </div>
                             </article>
                         </a>
+                    </div>
+                </section>
+            </div>
+            <!-- ************************ -->
+            <!-- ******* ACTIVITES ****** -->
+            <!-- ************************ -->
+            <div>
+                <section class="activites">
+                    <h2>Activités à Marseille</h2>
+                    <div>
+                        <a href="#"><img src="images/activites/reno-laithienne.jpg" alt="">Vieux-Port</a>
+                        <a href="#"><img src="images/activites/paul-hermann.jpg" alt="">Fort de Pomègues</a>
+                        <a href="#"><img src="images/activites/kilyan-sockalingum.jpg" alt="">Parc national des Calanques</a>
+                        <a href="#"><img src="images/activites/florian-wehde.jpg" alt="">Notre-Dame-de-la-Garde</a>
                     </div>
                 </section>
             </div>

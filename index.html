@@ -25,11 +25,10 @@
                     <a href="#">Hébergements</a>
                 </div>
                 <div class="page-activite">
-                    <a href="#">Activités</a>
+                    <a href="#activites">Activités</a>
                 </div>
             </nav>
         </header>
-       
         <main>
             <!-- ************************** -->
             <!-- SECTION RECHERCHE ET FITRE -->
@@ -85,8 +84,8 @@
             <!-- ********************* -->
             <div class="hebergements-and-populaires">
                 <section class="hebergements">
-                    <h2 class="section-title">Hébergement à Marseille</h2>
                     <div class="hebergements-cards">
+                        <span class="titleSpan-hebergement"><h2 class="section-title ">Hébergement à Marseille</h2></span>
                         <a href="#">
                             <article class="card">
                                 <img src="./images/hebergements/fred-kleber.jpg" alt="Image de la chambre d'hôtel montrant un lit">
@@ -201,8 +200,9 @@
                                 </div>
                             </article>
                         </a>
+                        <span class="linkMoreToSeeSpan"><a href="#">Afficher plus</a></span>
                     </div>
-                    <a href="#">Afficher plus</a>
+                    
                 </section>
                 <!-- ************************** -->
                 <!-- SECTION POPULAIRE A DROITE -->
@@ -276,21 +276,41 @@
             <!-- ************************ -->
             <!-- ******* ACTIVITES ****** -->
             <!-- ************************ -->
-            <div>
-                <section class="activites">
+            <div  class="activites">
+                <section id="activites">
                     <h2>Activités à Marseille</h2>
-                    <div>
-                        <a href="#"><img src="images/activites/reno-laithienne.jpg" alt="">Vieux-Port</a>
-                        <a href="#"><img src="images/activites/paul-hermann.jpg" alt="">Fort de Pomègues</a>
-                        <a href="#"><img src="images/activites/kilyan-sockalingum.jpg" alt="">Parc national des Calanques</a>
-                        <a href="#"><img src="images/activites/florian-wehde.jpg" alt="">Notre-Dame-de-la-Garde</a>
+                    <div class="choixActivites">
+                        <div class="cardActivites">
+                            <a  href="#">
+                                <img class="imgActivites" src="images/activites/reno-laithienne.jpg" alt="">
+                                <span>Vieux-Port</span>
+                            </a>
+                        </div>
+                        <div class="cardActivites">
+                            <a  href="#">
+                                <img class="imgActivites" src="images/activites/paul-hermann.jpg" alt="">
+                                <span>Fort de Pomègues</span>
+                            </a>
+                        </div> 
+                        <div class="cardActivites">
+                            <a  href="#">
+                                <img class="imgActivites" src="images/activites/kilyan-sockalingum.jpg" alt="">
+                                <span>Parc national des Calanques</span>
+                            </a>
+                        </div> 
+                        <div class="cardActivites">
+                            <a  href="#">
+                                <img class="imgActivites" src="images/activites/florian-wehde.jpg" alt="">
+                                <span>Notre-Dame-de-la-Garde</span>
+                            </a>
+                        </div>     
                     </div>
                 </section>
             </div>
         </main>
 
-        <footer>
-            <nav>
+        <footer  class="pieddepage">
+            <nav id="aPropos">
                 <ul>
                     <li><a href="#">A propos</a></li>
                     <li><a href="#">Fonctionnement du site</a></li>
@@ -298,14 +318,14 @@
                     <li><a href="#">Données et confidentialité</a></li>
                 </ul>
             </nav>
-            <nav>
+            <nav id="hebergements">
                 <ul>
                     <li><a href="#">Nos hébergements</a></li>
                     <li><a href="#">Charte qualité</a></li>
                     <li><a href="#">Proposer votre hotel</a></li>
                 </ul>
             </nav>
-            <nav>
+            <nav id="assistance">
                 <ul>
                     <li><a href="#">Assistance</a></li>
                     <li><a href="#">Centre d'aide</a></li>

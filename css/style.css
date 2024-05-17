@@ -9,11 +9,11 @@
 .section-title, .activites h2{ 
     font-size: 22px;
 }
-.section-filtre-titre{
+.section-filtre-titre .pieddepage{
     margin: 0;
     font-size: 18px;
 }
-.titreFiltre h2, .linkMoreToSeeSpan a, .search-item input{
+.titreFiltre h2, .linkMoreToSeeSpan a, .search-item input, .pieddepage p{
     font-size: 18px;
     font-weight: 700;
     /* line-height: 21.13px; */
@@ -25,7 +25,7 @@
 .card-title {
     font-size: 16px;
 }
-.entete a, .informationBar h3, .footer-link, .information{
+.entete a, .informationBar h3, .footer-link, .information, .pieddepage a{
     font-size: 16px;
     font-weight: 400;
 }
@@ -446,6 +446,32 @@ a {
     box-sizing: border-box;
 }
 
+/* ******************** */
+/******* FOOTER *********/
+/* ******************** */
+.pieddepage{
+    width: 1340px;
+    height: 163px;
+    background-color: #F2F2F2;
+    display: flex;
+}
+.pieddepage nav{
+    width: 446.67px;
+    height: 163px;
+    padding: 12px 0px 0px 0px;
+    gap: 15px;
+}
+.pieddepage li{
+    /* equilibre visuel trouvé entre le padding du nav , les intervalles entre les <li> et le bas du div */
+    /* on note que le padding d'origine est de 20px trop important par rapport ce que l'on voit en réél */
+    margin-bottom : 12px;
+}
+.pieddepage p{
+    margin : 0;
+}
+.pieddepage ul{
+    list-style-type: none;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 

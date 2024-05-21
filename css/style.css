@@ -294,10 +294,11 @@ a {
 /* ****************************************** */
 
 .hebergements-and-populaires {
+    width:100%;
+    max-width:1340px;
+    height: 614px;
     display: flex;
     justify-content: space-between;
-    height: 614px;
-    width:1340px;
     gap: 40px;
 }
 
@@ -405,16 +406,18 @@ a {
 /* ****** ACTIVITES ****** */
 /* *********************** */
 .activites{
-    width: 1340px;
+    width:100%;
+    max-width: 1340px;
     height: 559.02px;
     padding: 30px 0px 0px 0px;
     gap: 30px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin-left: 0px;
 }
 .choixActivites{
-    width: 1280px;
+    width:100%;
+    max-width: 1280px;
     height: 439px;
     gap: 30px;
     display: flex;
@@ -606,5 +609,41 @@ a {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    .main-container{
+        width: 375px;
+        height: auto;
+    }
+    .entete{
+        width: 375px;
+        height: 115px;
+        padding:0;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo{
+        width: 121px;
+        height: 79px;
+        /* 121-taille du logo (61) = 60 
+        ->/2 = padding 30 de chaque coté 
+        idem pour la hauteur*/
+        padding: 30px 30px 30px 30px;
+        border: 1px solid darkblue;
+    }
+    .nav-entete{
+        width: 375px;
+        height: 36px;
+        gap: 15px;
+        justify-content: space-between;
+        border: 1px solid darkblue;
+    }
+    .page-hebergement{
+        border-top-style: none;
+        border-bottom-style: solid;
+    }
+    .page-activite:hover{
+        border-top-style: none;
+        border-bottom-style: solid;
+        border-bottom-color: #000000;
+    }
 }

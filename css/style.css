@@ -8,6 +8,7 @@
 }
 .section-title, .activites h2{ 
     font-size: 22px;
+    font-weight: 700;
 }
 .section-filtre-titre .pieddepage{
     margin: 0;
@@ -33,6 +34,10 @@
     font-size: 16px;
     font-weight: bold;
 }
+.card-subtitle{
+    font-size: 14px;
+    font-weight: 400;
+}
 .euro {
     font-weight: 700;
 }
@@ -47,18 +52,24 @@
     color: var(--main-color);
 }
 
-body {
-    display: flex;
-    justify-content: center;
-}
-
 .main-container {
     width: 100%;
     max-width: 1440px;
     height: auto;
     padding: 0 50px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
+ main{
+    width: 100%;
+    max-width: 1440px;  
+ /*    display: flex;
+    flex-direction: column;
+    align-items: center;*/
+} 
 
 a {
     color: inherit;
@@ -68,8 +79,6 @@ a {
     margin-left: 10px;
     width: 100%;
 }
-
-
 .card {
     background-color: white;
     border-radius: 20px;
@@ -94,18 +103,19 @@ a {
     flex-wrap: wrap; /* retour a la ligne pour les petits écrans */
 }
 .entete{
+    width: 1440px;
+    height: 79px;
     /* gestion de l'espace entre image et navigation */
     flex-direction: row; /*en ligne*/
     justify-content: space-between;
     flex : 1;
-    height: 79px;
-    width: 1440px;
 }
 
 .logo{
     width: 161px;
     height: 79px;
-    padding: 30px 50px 30px 0px;
+    /* esth"tiquement discutable, k'ai supprimé le padding du dessous qui devait faire 30px */
+    padding: 30px 50px 0px 50px;
     gap : 10px;
 }
 .logo img{
@@ -476,22 +486,61 @@ a {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
-    .main-container{
-        width: 1024px;
+    /* FONTs */
+    .section-filtre{
+        font-size: 16px;
+        font-weight: 700;
     }
-    /* footer */
-    .entete{
-        /* width: 1024px; */
+
+    .main-container{
         width: 100%;
+        max-width: 1024px;
+        box-sizing: border-box;
+        /* top: 188px;
+        left: 223px; */
+    }
+    /* header */
+    .entete{
+        width: 100%;
+        max-width: 1024px;
+        padding:0;
+    }
+    .logo{
+        /* le main et l'entête ont la même taille 
+        ce qui n'est pas le cas dans desktop */
+        padding-left: 0px;
+    }
+
+    main{
+        /* même taille que le container principal 
+        car le padding suffit à le réduire */
+        width: 100%;
+        max-width: 1024px;
     }
     /* recherche et filtre */
     .info-groupe{
         width:100%;
+        max-width: 1024px;
+        height: 322px;
+        gap: 20px;
+        justify-content: space-between;
+    }
+    .filtreBar{
+        width : 668px;
+        height : 91px;
+    }
+    .section-filtre{
+        font-size: 16px;
+    }
+    .titreFiltre{
+        /* longeur de l'élément au max pour que les éléments de filtre passent à la ligne */
+        width: 100%;
     }
 
     /* hebergement et populaire */
     .hebergements-and-populaires {
-        width: 100%;
+        width:100%;
+        max-width: 1024px;
         height: auto;
         flex-direction: column;
         justify-content: space-between;
@@ -523,11 +572,35 @@ a {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    /* Activite */
     .activites{
-        width: 1024px;
+        width:100%;
+        max-width: 1024px;
+        height: 390px;
+    }
+    .choixActivites{
+        width: 93,5%;
+        max-width: 864px;
+        height: 270px;
+    }
+    .cardActivites{
+        width: 193.5px;
+        height: 270px;
+    }
+    .cardActivites span{
+        width: 193.5px;
+        /* jambe de bois pour décaller le texte 
+        padding 20 +gap10 aucun ne foncionnant */
+        margin-left: 30px;
+    }
+    .imgActivites{
+        width: 193.5px;
+        height: 200px;
     }
     .pieddepage{
         width: 100%;
+        max-width: 924px;
     }
 }
 

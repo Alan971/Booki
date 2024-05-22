@@ -5,6 +5,8 @@
 /* Fonts */
 * {
     font-family: 'Raleway', sans-serif;
+    /* padding: 0;
+    margin:0; */
 }
 .section-title, .activites h2{ 
     font-size: 22px;
@@ -14,7 +16,7 @@
     margin: 0;
     font-size: 18px;
 }
-.titreFiltre h2, .linkMoreToSeeSpan a, .search-item input, .pieddepage p{
+.filtreBar h2, .linkMoreToSeeSpan a, .search-item input, .pieddepage p{
     font-size: 18px;
     font-weight: 700;
     /* line-height: 21.13px; */
@@ -30,9 +32,9 @@
     font-size: 16px;
     font-weight: 400;
 }
-.search-button, .cardActivites span{
+.search-button, .cardActivites strong{
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
 }
 .card-subtitle{
     font-size: 14px;
@@ -52,6 +54,13 @@
     color: var(--main-color);
 }
 
+body{
+    /* pour centrer le contenu */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .main-container {
     width: 100%;
     max-width: 1440px;
@@ -60,15 +69,18 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
+
+    /* pas franchement utile tant que les hauteurs sont fixes */
+    align-content: center;
 }
  main{
     width: 100%;
     max-width: 1440px;  
- /*    display: flex;
+    display: flex;
     flex-direction: column;
-    align-items: center;*/
+    justify-content: center;
+    align-content: center;
 } 
 
 a {
@@ -103,7 +115,7 @@ a {
     flex-wrap: wrap; /* retour a la ligne pour les petits écrans */
 }
 .entete{
-    width: 1440px;
+    width: 100%;
     height: 79px;
     /* gestion de l'espace entre image et navigation */
     flex-direction: row; /*en ligne*/
@@ -114,9 +126,10 @@ a {
 .logo{
     width: 161px;
     height: 79px;
-    /* esth"tiquement discutable, k'ai supprimé le padding du dessous qui devait faire 30px */
-    padding: 30px 50px 0px 50px;
-    gap : 10px;
+    /* esth"tiquement discutable, j'ai supprimé le padding du dessous qui devait faire 30px */
+    /* padding: 30px 50px 0px 50px; */
+    padding-top: 30px;
+
 }
 .logo img{
     width: 61px;
@@ -136,29 +149,31 @@ a {
     position:relative;
     bottom: 0px;
 }
-.page-hebergement{
+.pageHebergement{
     color : var(--main-color);
     
     border-top-color : var(--main-color);
     border-top-width: 2px;
     border-top-style: solid;
+    padding-top: 5px;
 
     border-bottom-color: var(--main-color);
     border-bottom-width: 2px;
     border-bottom-style: none;
 }
-.page-activite{
+.pageActivite{
     color: #000000;
 
     border-top-color : var(--main-color);
     border-top-width: 2px;
     border-top-style: none;
+    padding-top: 5px;
 
     border-bottom-color: var(--main-color);
     border-bottom-width: 2px;
     border-bottom-style: none;
 }
-.page-activite:hover{
+.pageActivite:hover{
     border-top-style: solid;
     border-top-color: #000000;
 }
@@ -248,26 +263,24 @@ a {
     width: 758px;
     gap: 15px;
     justify-content: space-between;
+    align-items: center;
 }
 
-.titreFiltre{
+.filtreBar h2{
     vertical-align: center;
 }
-
-.eco, .familial, .romantique, .pepites{
+.filtreBar a{
     border: 2px solid #D9D9D9;
     border-radius: 25px;
     gap:10px;
-
-    height: Fixed (50px)px;
-    padding: 14px 19px 4px 19px;
+    padding: 10px 20px;
 }
 .filtreBar span{
     /* transformation du span en inlineblock pour mettre l'icone et le texte sur la même ligne */
     display: inline-block;
 }
-.eco:hover, .familial:hover, .romantique:hover, .pepites:hover{
-    background-color: var(--main-color);
+.filtreBar a:hover{
+    background-color: #DEEBFF;
 }
 
 /* barre de commentaire */
@@ -325,10 +338,12 @@ a {
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
-     
 }
 .hebergements-cards a{
     width:250px;
+}
+.toDisplayBloc{
+    display: block;
 }
 .hebergements-cards .card {
     display: flex;
@@ -401,58 +416,46 @@ a {
     margin-bottom: 5px;
 }
 
-
 /* *********************** */
 /* ****** ACTIVITES ****** */
 /* *********************** */
 .activites{
-    width:100%;
-    max-width: 1340px;
-    height: 559.02px;
-    padding: 30px 0px 0px 0px;
-    gap: 30px;
-    display: flex;
-    justify-content: space-between;
-    margin-left: 0px;
+    width: 96%;
+    max-width: 1280px;
+    max-height: 559px;
+    padding: 30px 0px 30px 0px;
+    margin-left: 2%;
 }
 .choixActivites{
-    width:100%;
-    max-width: 1280px;
-    height: 439px;
-    gap: 30px;
+    /* height: 439px; */
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;  
+    justify-content: space-around;  
 }
 .choixActivites h2{
     padding-left: 10px;
 }
 .cardActivites{
-    width: 297.5px;
-    height: 439px;
+    width : 23%;
+    max-width: 297px;
+    /* height: 439px; */
     border-radius: 20px 20px 20px 20px;
     box-shadow: 0px 3px 15px 0px #0000001A;
     box-sizing: border-box;
 }
-.cardActivites a{
-    display: flex;
-    flex-direction: column;
-    /* ne fonctionne pas même en créant un span autour de l'image
-    donc margin-top de la moitié de l'espace restant dans span */
-    /* justify-content: space-between; */
-
-    /* alignement horizontal */
-    align-items: center;
-}
-.cardActivites span{
-    width: 259px;
+.cardActivites strong{
+    width: 87%; /* 259/297=87% */
+    /* width: 259px; */
     display: block;
     margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
 }
 
 .imgActivites{
-    width: 297.5px;
+    width: 100%;
+    max-height:86%;
     height: 380px;
+    object-fit:fill;
     border-radius: 20px 20px 0px 0px;
     box-sizing: border-box;
 }
@@ -460,22 +463,21 @@ a {
 /* ******************** */
 /******* FOOTER *********/
 /* ******************** */
-.pieddepage{
-    width: 1340px;
+.pieddepage nav{
+    width: 100%;
+    max-width: 1340px;
     height: 163px;
     background-color: #F2F2F2;
     display: flex;
+    justify-content: space-between;
 }
-.pieddepage nav{
-    width: 446.67px;
-    height: 163px;
-    padding: 12px 0px 0px 0px;
-    gap: 15px;
+.pieddepage ul{
+    width: 350px;
+    /* height: 163px; */
+    /* padding: 12px 0px 0px 50px; */
 }
 .pieddepage li{
-    /* equilibre visuel trouvé entre le padding du nav , les intervalles entre les <li> et le bas du div */
-    /* on note que le padding d'origine est de 20px trop important par rapport ce que l'on voit en réél */
-    margin-bottom : 12px;
+    margin-bottom : 8px;
 }
 .pieddepage p{
     margin : 0;
@@ -535,7 +537,7 @@ a {
     .section-filtre{
         font-size: 16px;
     }
-    .titreFiltre{
+    .filtreBar h2{
         /* longeur de l'élément au max pour que les éléments de filtre passent à la ligne */
         width: 100%;
     }
@@ -591,7 +593,7 @@ a {
         width: 193.5px;
         height: 270px;
     }
-    .cardActivites span{
+    .cardActivites strong{
         width: 193.5px;
         /* jambe de bois pour décaller le texte 
         padding 20 +gap10 aucun ne foncionnant */
@@ -637,11 +639,11 @@ a {
         justify-content: space-between;
         border: 1px solid darkblue;
     }
-    .page-hebergement{
+    .pageHebergement{
         border-top-style: none;
         border-bottom-style: solid;
     }
-    .page-activite:hover{
+    .pageActivite:hover{
         border-top-style: none;
         border-bottom-style: solid;
         border-bottom-color: #000000;

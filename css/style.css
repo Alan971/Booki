@@ -19,7 +19,6 @@
 .linkMoreToSeeSpan a, .searchItem input, .pieddepage p{
     font-size: 18px;
     font-weight: 700;
-    /* line-height: 21.13px; */
 }
 .filtreBar span{
     margin: 0;
@@ -33,7 +32,7 @@
     font-size: 16px;
     font-weight: 400;
 }
-.searchButton, .cardActivites strong{
+.searchButton, .searchLoupe, .cardActivites strong{
     font-size: 16px;
     font-weight: 700;
 }
@@ -198,8 +197,8 @@ a {
 }
 .searchBar {
     background-color: white;
-    height: 49px;
     width: 377px;
+    height: 49px;
 }
 .searchBar form{
     /*nécessairement  non wrap*/
@@ -231,25 +230,33 @@ a {
     height: 45px; 
     text-align: center;
 }
-.dedionbouton{
+.twoButton{
     /* Div nécessaire pour ajuster en hauteur et indépendament la taille du bouton rechercher 
     sans lui la taille de l'input varie proportionellement aux modifications apportées*/
     height: 49px;
 }
-
-.searchButton {
+.searchLoupe, .searchButton{
     background-color: var(--main-color);
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
     border: none;
-    width: auto;
-    height: 100%;
-
     color: white;
     text-align: center;
-
+} 
+.searchButton {
+    width: auto;
+    height: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     margin: 0px 0px;
     padding: 0px 25px;
+}
+.searchLoupe{
+    width: 49px;
+    height: 49px;
+    border-radius: 15px;
+}
+.searchLoupe .fa-solid{
+    color:white;
+    font-size: 18px;
 }
 .footerLink, .informationBar span{
     margin: 0;
@@ -608,30 +615,38 @@ a {
     .main-container{
         width: 375px;
         height: auto;
+        padding: 0;
+        border: 3px dotted pink;
     }
+
+    /* ******* Header ********* */
     .entete{
         width: 100%;
         height: 115px;
-        padding:0;
+        /* marge du bas voir on ne peux pas mieux faire */
+        padding: 0px 0px 20px 0px;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
     }
     .logo{
-        width: 121px;
+        /* width: 121px; */
+        width :100%;
         height: 79px;
-        /* 121-taille du logo (61) = 60 
-        ->/2 = padding 30 de chaque coté 
-        idem pour la hauteur*/
-        padding: 30px 30px 30px 30px;
-        border: 1px solid darkblue;
+        padding: 0;
+        /* centrage de l'image en hauteur */
+        align-content: center;
+    }
+    .logo img{
+        /* centrage de l'image en largeur */
+        padding-left: 50%;
     }
     .navEntete{
-        width: 375px;
+        width: 100%;
         height: 36px;
         gap: 15px;
+        padding: 0;
         justify-content: space-between;
-        border: 1px solid darkblue;
     }
     .pageHebergement{
         border-top-style: none;
@@ -642,4 +657,38 @@ a {
         border-bottom-style: solid;
         border-bottom-color: #000000;
     }
+
+    /* ************ Info groupe ***************** */
+    .headline{
+        max-width: 375px;
+        width: 100%;
+    }
+    .headline strong{
+        width: 100%;
+        overflow-wrap: break-word;
+
+    }
+    .searchBar{
+        width: 335px;
+    }
+    .searchBar form{
+        justify-content: space-between;
+    }
+    .searchItem{
+        width: 100%;
+    }
+    .searchBar i{
+        width: 50px;      
+    }
+    .searchBar input{
+        width: 70%;
+    }
+    .searchButton{
+        display: none;
+    }  
+    .searchLoupe{
+        display: block;
+    }  
+
+
 }

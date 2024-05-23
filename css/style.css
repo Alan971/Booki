@@ -11,7 +11,6 @@
 .titleSpanHebergement, .populairesTitle strong, .activites h2, .headline strong{ 
     font-size: 22px;
     font-weight: 700;
-    height: 26px;
 }
 .section-filtre-titre .pieddepage{
     margin: 0;
@@ -27,7 +26,7 @@
     font-size: 17px;
     font-weight: 700;
 }
-.card-title {
+.cardTitle {
     font-size: 16px;
 }
 .entete a, .informationBar span, .footerLink, .pieddepage a{
@@ -38,7 +37,7 @@
     font-size: 16px;
     font-weight: 700;
 }
-.card-subtitle{
+.cardSubtitle{
     font-size: 14px;
     font-weight: 400;
 }
@@ -260,9 +259,8 @@ a {
 /* ****** FILTRES ******** */
 /* *********************** */
 .filtreBar{
-    height:50px;
     width: 758px;
-    gap: 15px;
+    height:50px;
     justify-content: space-between;
     align-items: center;
 }
@@ -389,28 +387,28 @@ a {
     border-bottom-left-radius: 20px;
 }
 
-.card-content{
+.cardContent{
     padding-left: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
 }
-.populairesCards .card-content{
+.populairesCards .cardContent{
     width: 67%;
 } 
-.hebergementsCards .card-content{
+.hebergementsCards .cardContent{
     width: 100%;
 }
 
-.card-title{
+.cardTitle{
     margin-top: 10px;
     margin-bottom: 4px;
 }
-.card-subtitle{
+.cardSubtitle{
     margin: 0;
 }
-.card-rating{
+.cardRating{
     margin-bottom: 5px;
 }
 
@@ -522,16 +520,20 @@ a {
     /* recherche et filtre */
     .infoGroupe{
         width:100%;
+        height : 322px;
         max-width: 1024px;
-        gap: 20px;
     }
     .filtreBar{
         width : 668px;
         height : 91px;
+        align-items:start;
     }
     .filtreBar h2{
         /* longeur de l'élément au max pour que les éléments de filtre passent à la ligne */
         width: 100%;
+        /* permet de mettre H2 plus haut, a raz du bloc filtreBar */
+        margin-block-start: 0em;
+        margin-block-end: 0em;
     }
 
     /* hebergement et populaire */
@@ -562,11 +564,11 @@ a {
         width: 30%;
     }
 
-    .populairesCards .card-title {
+    .populairesCards .cardTitle {
         font-size: 14px;
     }
 
-    .populairesCards .card-subtitle {
+    .populairesCards .cardSubtitle {
         font-size: 13px;
     }
 
@@ -608,7 +610,7 @@ a {
         height: auto;
     }
     .entete{
-        width: 375px;
+        width: 100%;
         height: 115px;
         padding:0;
         flex-direction: column;

@@ -431,6 +431,7 @@ a {
 }
 .cardActivites{
     width : 23%;
+    /* figma indique 297px sur desktop et 210 dans component */
     max-width: 297px;
     /* height: 439px; */
     border-radius: 20px 20px 20px 20px;
@@ -441,7 +442,7 @@ a {
     width: 87%; /* 259/297=87% */
     /* width: 259px; */
     display: block;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
     margin-left: 20px;
 }
@@ -589,17 +590,15 @@ a {
         height: 270px;
     }
     .cardActivites{
-        width: 193.5px;
+        /* même remarque que pour desktop : 210px dans component et 193.5 dans tablet */
+        max-width: 193.5px;
         height: 270px;
     }
-    .cardActivites strong{
-        width: 193.5px;
-        /* jambe de bois pour décaller le texte 
-        padding 20 +gap10 aucun ne foncionnant */
-        margin-left: 30px;
-    }
+    /* .cardActivites strong{
+        width: 80%;
+    } */
     .imgActivites{
-        width: 193.5px;
+        width: 100%;
         height: 200px;
     }
     .pieddepage{

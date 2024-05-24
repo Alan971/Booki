@@ -418,7 +418,7 @@ a {
 .activites{
     width: 96%;
     max-width: 1280px;
-    max-height: 559px;
+    /* height: 559px; */
     padding: 30px 0px 30px 0px;
     margin-left: 2%;
 }
@@ -622,9 +622,11 @@ a {
     .mainContainer{
         width: 375px;
         padding: 0;
-        border: 3px dotted pink;
     }
-
+    main{
+        /* pour aligner au centre tous les éléments hors header et footer */
+        align-items: center;
+    }
     /* ******* Header ********* */
     .entete{
         width: 100%;
@@ -644,19 +646,37 @@ a {
         align-content: center;
     }
     .logo img{
-        /* centrage de l'image en largeur */
-        padding-left: 50%;
+        /* centrage de l'image en largeur ((375 - 61)/2)px=157px ,
+        soit 42% */
+        padding-left: 42%;
     }
     .navEntete{
         width: 100%;
         height: 36px;
-        gap: 15px;
+        gap: 0px;
         padding: 0;
-        justify-content: space-around;
+        flex-wrap: nowrap;
+        box-sizing: border-box;
     }
     .pageHebergement{
+        margin: 0;
+        width: 50%;
+        text-align: center;
         border-top-style: none;
         border-bottom-style: solid;
+
+        /* border-style: solid; */
+    }
+    .pageActivite{
+        width: 50%;
+        text-align: center;
+        margin: 0;
+        border-bottom-style: solid;
+        border-bottom-color: #F2F2F2;
+
+        /* position: relative; */
+        /* border-color: black;
+        border-style: solid; */
     }
     .pageActivite:hover{
         border-top-style: none;
@@ -666,10 +686,11 @@ a {
 
     /* ************ Info groupe ***************** */
     .infoGroupe{
+        /* 375-40 car plus petit que le reste*/
+        max-width: 335px; 
         height: 432px;
     }
     .headline{
-        max-width: 375px;
         width: 100%;
     }
     .headline strong{
@@ -740,17 +761,19 @@ a {
     
     /* ******************** Activités ************************** */
     .activites{
-        /*  */
-        height: 10000px;
+        height: auto;
         align-items: center;
         justify-content: space-between;
-        border: 1px solid darkblue;
+        margin-left: 0px;
+    }
+    .activites h2{
+        /* décallage a droite pour commencer au bord de l'image */
+        margin-left: 40px;
     }
     .choixActivites{
         height: auto;
         flex-direction: column;
         align-items: center;
-        border: 1px solid red;
     }
     .cardActivites{
         width: 100%;  
@@ -766,6 +789,7 @@ a {
     }
     /* ******************** a propos *********************** */
     .pieddepage nav{
+        height: auto;
         flex-direction: column;
     }
 }

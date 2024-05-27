@@ -8,7 +8,7 @@
     padding: 0;
     margin:0;
 }
-.titleSpanHebergement, .populairesTitle strong, .activites h2, .headline strong{ 
+.titleSpanHebergement, .populairesTitle strong, .activites h2, h1{ 
     font-size: 22px;
     font-weight: 700;
 }
@@ -16,7 +16,7 @@
     margin: 0;
     font-size: 18px;
 }
-.linkMoreToSeeSpan a, .searchItem input, .pieddepage p{
+.linkMoreToSeeSpan a, .searchItem input, .pieddepage p, .filtreBar h3{
     font-size: 18px;
     font-weight: 700;
 }
@@ -527,7 +527,7 @@ a {
         height : 91px;
         align-items:start;
     }
-    .filtreBar h2{
+    .filtreBar h3{
         /* longeur de l'élément au max pour que les éléments de filtre passent à la ligne */
         width: 100%;
         /* permet de mettre H2 plus haut, a raz du bloc filtreBar */
@@ -577,7 +577,6 @@ a {
         width:100%;
         max-width: 1024px;
         height: 390px;
-        border : 1px solid black;
     }
     .choixActivites{
         width: 93%;
@@ -684,7 +683,7 @@ a {
     .headline{
         width: 100%;
     }
-    .headline strong{
+    h1{
         width: 100%;
         overflow-wrap: break-word;
     }

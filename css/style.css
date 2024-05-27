@@ -8,7 +8,7 @@
     padding: 0;
     margin:0;
 }
-.titleSpanHebergement, .populairesTitle strong, .activites h2, h1{ 
+.titleSpanHebergement, .populairesTitle h2, .activites h2, h1{ 
     font-size: 22px;
     font-weight: 700;
 }

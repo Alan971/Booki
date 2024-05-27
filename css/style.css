@@ -136,7 +136,7 @@ a {
     /* gestion de l'organisation spaciale des 2 boutons de navigation */
     width: 344px;
     height: 35px;
-    padding: 0px 50px 0px 50px;
+    padding: 0px 0px 0px 50px;
     gap : 68px;
     flex-direction: row;
     justify-content: flex-end;
@@ -171,7 +171,8 @@ a {
 }
 .pageActivite:hover{
     border-top-style: solid;
-    border-top-color: #000000;
+    border-top-color: var(--main-color);
+    color : var(--main-color);
 }
 
 /* ************************** */
@@ -669,7 +670,8 @@ a {
     .pageActivite:hover{
         border-top-style: none;
         border-bottom-style: solid;
-        border-bottom-color: #000000;
+        border-bottom-color: var(--main-color);
+        color : var(--main-color);
     }
 
     /* ************ Info groupe ***************** */

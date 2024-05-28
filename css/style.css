@@ -189,7 +189,6 @@ a {
 .searchItem {
     /*nécessairement  non wrap*/
     display: flex;
-    /* couleur de fond de l'icone 'vector' partiellement masqué par l'input */
     background-color: var(--main-bg-color);
     align-items: center;
     justify-content: center;
@@ -634,14 +633,13 @@ a {
         width: 50%;
         text-align: center;
         margin: 0;
+    }
+    .navLink a{
         border-bottom-style: solid;
         border-bottom-color: #F2F2F2;
-
-        /* position: relative; */
-        /* border-color: black;
-        border-style: solid; */
+        padding-bottom: 15px;
     }
-    .navLink:hover, .navLink a:focus{
+    .navLink a:hover, .navLink a:focus{
         border-top-style: none;
         border-bottom-style: solid;
         border-bottom-color: var(--main-color);
@@ -673,13 +671,10 @@ a {
         justify-content: space-between;
     }
     .searchItem{
-        width: 100%;
-    }
-    .searchBar i{
-        width: 50px;      
+        width: 15%;
     }
     .searchBar input{
-        width: 70%;
+        width: 85%;
     }
     .searchButton{
         display: none;

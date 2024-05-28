@@ -66,9 +66,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
-    /* pas franchement utile tant que les hauteurs sont fixes */
-    /* align-content: center; */
 }
  main{
     width: 100%;
@@ -102,9 +99,9 @@ a {
     color: var(--main-bg-color)
 }
 
-/* *******************************************  */
+/* ******************************************** */
 /* *************** header ********************* */
-/* *******************************************  */
+/* ******************************************** */
 
 .flexCommun{
     display: flex;
@@ -792,6 +789,5 @@ a {
     .pieddepage nav{
         height: auto;
         flex-direction: column;
-        padding: 20px;
     }
 }

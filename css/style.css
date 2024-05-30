@@ -165,7 +165,6 @@ a {
 /* SECTION RECHERCHE ET FITRE */
 /* ************************** */
 .infoGroupe{
-    /* width: 1340px; */
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
@@ -256,16 +255,9 @@ a {
     gap:10px;
     padding: 10px 20px;
 }
-/* .filtreBar span{ */
-    /* transformation du span en inlineblock pour mettre l'icone et le texte sur la même ligne */
-    /* display: inline-block;
-    vertical-align: center;
-    margin: 0; */
-/* } */
 .filtreBar a:hover{
     background-color: #DEEBFF;
 }
-
 /* barre de commentaire */
 .informationBar{
     height: 24px;
